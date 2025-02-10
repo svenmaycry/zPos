@@ -1,0 +1,65 @@
+//Обнуление
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  &:not([class]) {
+    &:visited {
+      color: #000000;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:focus, &:active {
+    outline: none;
+  }
+}

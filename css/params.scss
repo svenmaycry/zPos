@@ -1,0 +1,47 @@
+// Подключение шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Шрифт по умолчанию
+$fontSize: 16px;
+$font: "Montserrat", serif;
+
+// Общие параметры
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  font-size: $fontSize;
+  font-family: $font;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  color: #000;
+  background-color: #ffffff;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 1279px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.visually-hidden {
+  display: none;
+}
