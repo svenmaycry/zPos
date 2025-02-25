@@ -1,0 +1,38 @@
+.stands-aside {
+  &__list {
+    max-width: 320px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        display: block;
+        width: 95%;
+        height: 1px;
+        background-color: #7979791f;
+      }
+    }
+    
+    &__link {
+      display: block;
+      font-size: clamp(12px, 3vw, 14px);
+      color: black;
+      transition: color 0.3s ease-in, background-color 0.3s ease-in;
+      padding: clamp(10px, 3vw, 15px);
+
+      &:hover, &:focus {
+        color: #249CC2;
+        background-color: #FBF8F8;
+        outline: none;
+      }
+    }
+  }
+}
